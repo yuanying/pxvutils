@@ -10,4 +10,4 @@ $fixture_dir = File.join(File.dirname(__FILE__), '..', 'fixtures') unless $fixtu
 
 $:.unshift(File.dirname(__FILE__) + '/../lib')
 
-require pxvutils
+require 'pxvutils'
