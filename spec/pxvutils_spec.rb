@@ -2,7 +2,10 @@ require File.dirname(__FILE__) + '/spec_helper.rb'
 
 describe Pxv::User do
   before do
-    @user = Pxv::User.new(nil, '888888')
+    page  = mock('page', :root => Nokogiri::HTML(open(File.join($fixture_dir, 'html', 'member_illust.01.html'))))
+    agent = mock('agent', :get => page)
+    pixiv = mock('pixiv', :agent => agent)
+    @user = Pxv::User.new(pixiv, '888888')
   end
   
   describe '#analyze_username' do
