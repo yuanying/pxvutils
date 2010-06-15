@@ -78,7 +78,7 @@ class Pxv
     
   end
 
-  class Image
+  class Illust
     attr_accessor :pixiv
     attr_accessor :user
     attr_accessor :thumbnail_url
